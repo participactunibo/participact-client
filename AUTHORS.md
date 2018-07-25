@@ -1,4 +1,4 @@
-#_Contributors_
+# _Contributors_
 
 Developed parts of the project:
 
