@@ -1,0 +1,16 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataPhoneCallEventProtos";
+
+message DataPhoneCallEventProtoList {
+    repeated DataPhoneCallEventProto list = 1;
+}
+
+message DataPhoneCallEventProto {
+    required int64 sampleTime = 1;
+    required bool is_start = 2;
+    required bool is_incoming = 3;
+    required string phone_number = 4;
+}

@@ -1,0 +1,14 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataLightProtos";
+
+message DataLightProtoList {
+    repeated DataLightProto list = 1;
+}
+
+message DataLightProto {
+    required int64 sampleTime = 1;
+    required float value = 2;
+}

@@ -1,0 +1,17 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataBluetoothProtos";
+
+message DataBluetoothProtoList {
+    repeated DataBluetoothProto list = 1;
+}
+
+message DataBluetoothProto {
+    required int64 sampleTime = 1;
+    required string mac = 2;
+    required string friendly_name = 3;
+    required int32 deviceClass = 4;
+    required int32 major_class = 5;
+}

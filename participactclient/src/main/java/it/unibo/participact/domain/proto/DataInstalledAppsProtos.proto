@@ -1,0 +1,17 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataInstalledAppsProtos";
+
+message DataInstalledAppsProtoList {
+    repeated DataInstalledAppsProto list = 1;
+}
+
+message DataInstalledAppsProto {
+    required int64 sampleTime = 1;
+    required string pkg_name = 2;
+    required float version_code = 3;
+    required string version_name = 4;
+    required string requested_permissions = 5;
+}

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ ParticipAct
+  ~ Copyright 2013-2018 Alma Mater Studiorum – Università di Bologna
+  ~ This file is part of ParticipAct.
+  ~ ParticipAct is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License.
+  ~ ParticipAct is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~ You should have received a copy of the GNU General Public License along with ParticipAct. If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="it.unibo.participact"
+    android:versionCode="30"
+    android:versionName="5.2.3">
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <!-- GCM connects to Google Services. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- GCM requires a Google account. -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <!-- Keeps the processor from sleeping when a message is received. -->
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+
+    <permission
+        android:name="it.unibo.participact.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="it.unibo.participact.permission.C2D_MESSAGE" />
+
+    <!-- This app has permission to register and receive data message. -->
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <!-- <uses-permission android:name="android.permission.VIBRATE" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Permission required by MoST -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Google Play Services AR permission -->
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:name=".ParticipActApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppThemeMaterial"
+        tools:replace="android:name,android:theme,android:allowBackup">
+        <receiver
+            android:name=".broadcastreceivers.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+
+                <!-- Receives the actual messages. -->
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="it.unibo.participact" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Services for RoboSpice Request -->
+        <service
+            android:name=".network.request.ParticipactSpringAndroidService"
+            android:exported="false" />
+        <service
+            android:name=".network.request.ApacheHttpSpiceService"
+            android:exported="false" />
+
+        <!-- App Activities -->
+        <activity
+            android:name=".activities.WelcomeActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_welcome"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_dashboard"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.LoginActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"></activity>
+        <activity
+            android:name=".questionnaire.QuestionnaireActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_questionnaire"
+            android:noHistory="true"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.TimeWarningActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_welcome"
+            android:noHistory="true"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".activities.CreateTaskActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_create_task"
+            android:screenOrientation="portrait">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="it.unibo.participact.activities.DashboardActivity" />
+        </activity>
+
+        <!-- App services -->
+        <service android:name="org.most.MoSTService" />
+        <service android:name=".ParticipActService" />
+        <service android:name=".services.NetworkService" />
+
+        <!-- App BroadcastReceivers -->
+        <receiver android:name=".broadcastreceivers.BootBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcastreceivers.ShutdownBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcastreceivers.UploadBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="it.unibo.participact.UPLOAD_INTENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcastreceivers.MoSTPingBroadcastReceiver">
+            <intent-filter>
+                <action android:name="org.most.ping.action" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcastreceivers.ProgressBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="it.unibo.participact.PROGRESS_INTENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcastreceivers.DailyNotificationBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="it.unibo.participact.DAILY_NOTIFICATION_INTENT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcastreceivers.UploadCollectedGeobadgeReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="it.unibo.participact.DAILY_UPLOAD_COLLECTEDGEOBADGE_INTENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcastreceivers.ChangeDateBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.TIME_SET" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcastreceivers.CheckClientAppBroadcastReceiver">
+            <intent-filter>
+                <action android:name="it.unibo.participact.CHECK_APP_VERSION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcastreceivers.ADBroadcastReceiver">
+            <intent-filter>
+                <action android:name="it.unibo.participact.STOP_ACTIVITY_DETECTION" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcastreceivers.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+
+                <data
+                    android:path="it.unibo.participact"
+                    android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcastreceivers.StateLogBroadcastReceiver">
+            <intent-filter>
+                <action android:name="it.unibo.participact.STATE_LOG" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <service
+            android:name=".services.PendingActiveTaskIntentService"
+            android:exported="false"></service>
+
+        <receiver
+            android:name=".broadcastreceivers.CheckPendingActionsBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="it.unibo.participact.CHECK_PENDING_ACTIONS" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

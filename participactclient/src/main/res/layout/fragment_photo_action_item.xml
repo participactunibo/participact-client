@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ ParticipAct
+  ~ Copyright 2013-2018 Alma Mater Studiorum – Università di Bologna
+  ~ This file is part of ParticipAct.
+  ~ ParticipAct is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License.
+  ~ ParticipAct is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~ You should have received a copy of the GNU General Public License along with ParticipAct. If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/windowsBackground">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="8dp"
+        android:gravity="left"
+        android:src="@drawable/ic_photo_camera_black_36dp"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/action_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center|left"
+        android:maxLines="1"
+        android:layout_toRightOf="@+id/imageView"
+        android:layout_toLeftOf="@+id/action_remove_button"
+        android:textColor="@color/primary_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="20sp" />
+
+    <ImageButton
+        android:id="@+id/action_remove_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginTop="11dp"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:gravity="center|right"
+        android:src="@drawable/ic_remove"
+        tools:ignore="contentDescription" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/action_photo_name"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textSize="13sp"
+        android:layout_marginLeft="8dp"
+        android:layout_toLeftOf="@+id/action_remove_button"
+        android:textColor="@color/primary_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:background="@color/windowsBackground"
+        android:layout_below="@+id/action_type"
+        android:layout_toRightOf="@+id/imageView" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/action_photo_details"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textSize="13sp"
+        android:layout_marginLeft="8dp"
+        android:layout_toLeftOf="@+id/action_remove_button"
+        android:textColor="@color/primary_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:background="@color/windowsBackground"
+        android:layout_below="@+id/action_photo_name"
+        android:layout_toRightOf="@+id/imageView" />
+
+
+</RelativeLayout>

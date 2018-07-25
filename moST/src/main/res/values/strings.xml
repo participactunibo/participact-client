@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name">AIMoST</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">AIMoST</string>
+    <string name="title_activity_training">AIMoST</string>
+    <string name="trainingMode_title">Training Mode</string>
+    <string name="current_activity_static_string">Activity recognition</string>
+    <string name="start_service_bt_str">Start service</string>
+    <string name="stop_service_bt_str">Stop service</string>
+    <string name="click_start_str">Seleziona un\'attività e premi start_service per iniziare (Ricordati di attivare il WIFI!)</string>
+    <string name="static_training_string">Which kind of activity do you want me to learn?</string>
+    <string name="walk_str">Walk</string>
+    <string name="run_str">Run</string>
+    <string name="car_str">Car</string>
+    <string name="menu_main_activity">Activity Recognition</string>
+    <string name="training_switch_str">Training mode</string>
+    <string name="save_title">Saving</string>
+    <string name="save_str">Choose a dump_file name</string>
+    <string name="untitled">Insert file name</string>
+    <string name="no_name_given">You have not specified a file name</string>
+    <string name="activity_prompt">Scegli un\'attività</string>
+    <string-array name="activity_array">
+        <item>Camminata</item>
+        <item>Automobile</item>
+        <item>Autobus</item>
+        <item>Corsa</item>
+        <item>Treno</item>
+    </string-array>
+
+</resources>

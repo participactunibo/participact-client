@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ ParticipAct
+  ~ Copyright 2013-2018 Alma Mater Studiorum – Università di Bologna
+  ~ This file is part of ParticipAct.
+  ~ ParticipAct is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License.
+  ~ ParticipAct is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~ You should have received a copy of the GNU General Public License along with ParticipAct. If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/sensing_input_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        >
+
+        <it.unibo.participact.views.floating_duration.FloatingLabelDurationPicker
+            android:id="@+id/sensing_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_timepicker"
+            app:flw_labelTextColor="@color/grey"
+            app:flw_labelTextSize="18sp"
+            app:flw_inputWidgetTextSize="20sp"
+            android:inputType="datetime"
+            app:flw_labelText="@string/add_sensing_action_duration" />
+
+        <com.marvinlabs.widget.floatinglabel.edittext.FloatingLabelEditText
+            android:id="@+id/sensing_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flw_labelTextColor="@color/grey"
+            app:flw_labelTextSize="18sp"
+            app:flw_labelText="@string/add_sensing_action_description"
+            app:flw_inputWidgetTextSize="20sp" />
+
+        <com.marvinlabs.widget.floatinglabel.itempicker.FloatingLabelItemPicker
+            android:id="@+id/input_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flw_labelText="@string/add_sensing_action_type"
+            app:flw_labelTextColor="@color/grey"
+            app:flw_labelTextSize="18sp"
+            app:flw_inputWidgetTextSize="20sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/sensing_input_layout"
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sensing_duration_info"
+            android:textColor="@color/secondary_text"
+            android:textSize="17sp"
+            android:id="@+id/info_sensing_textView" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/task_duration_info"
+            android:textColor="@color/secondary_text"
+            android:id="@+id/info_task_duration_textView"
+            android:textSize="17sp"/>
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        fab:fab_icon="@drawable/ic_action_accept"
+        app:fab_colorPressed="@color/accent"
+        app:fab_colorNormal="@color/accent" />
+
+</RelativeLayout>

@@ -1,0 +1,15 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataConnectionTypeProtos";
+
+message DataConnectionTypeProtoList {
+    repeated DataConnectionTypeProto list = 1;
+}
+
+message DataConnectionTypeProto {
+    required int64 sampleTime = 1;
+    required string connection_type = 2;
+    required string mobile_network_type = 3;
+}

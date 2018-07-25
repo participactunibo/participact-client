@@ -1,0 +1,21 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataCellProtos";
+
+message DataCellProtoList {
+    repeated DataCellProto list = 1;
+}
+
+message DataCellProto {
+    required int64 sampleTime = 1;
+    required string phone_type = 2;
+    required int32 gsm_cell_id = 3;
+    required int32 gsm_lac = 4;
+    required int32 base_station_id = 5;
+    required int32 base_station_latitude = 6;
+    required int32 base_station_longitude = 7;
+    required int32 base_network_id = 8;
+    required int32 base_system_id = 9;
+}

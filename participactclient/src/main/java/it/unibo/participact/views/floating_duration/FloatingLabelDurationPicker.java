@@ -1,0 +1,50 @@
+/*
+ * ParticipAct
+ * Copyright 2013-2018 Alma Mater Studiorum – Università di Bologna
+ * This file is part of ParticipAct.
+ * ParticipAct is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License.
+ * ParticipAct is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with ParticipAct. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+package it.unibo.participact.views.floating_duration;
+
+import android.content.Context;
+import android.util.AttributeSet;
+
+import it.unibo.participact.R;
+
+/**
+ * Created by alessandro on 29/11/14.
+ */
+public class FloatingLabelDurationPicker extends FloatingLabelBaseDurationPicker {
+
+
+    // =============================================================================================
+    // Lifecycle
+    // ==
+
+    public FloatingLabelDurationPicker(Context context) {
+        super(context);
+    }
+
+    public FloatingLabelDurationPicker(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public FloatingLabelDurationPicker(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+    }
+
+    // =============================================================================================
+    // Overridden methods
+    // ==
+
+
+    @Override
+    protected int getDefaultDrawableRightResId() {
+        return R.drawable.ic_timepicker;
+    }
+
+}

@@ -1,0 +1,16 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataQuestionaireClosedAnswerProtos";
+
+message DataQuestionaireClosedAnswerProtoList {
+    repeated DataQuestionaireClosedAnswerProto list = 1;
+}
+
+message DataQuestionaireClosedAnswerProto {
+    required int64 sampleTime = 1;
+    required int64 closedAnswer_id = 2;
+    required int64 question_id = 3;
+    required bool answer_value = 4;
+}

@@ -1,0 +1,16 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataAppOnScreenProtos";
+
+message DataAppOnScreenProtoList {
+    repeated DataAppOnScreenProto list = 1;
+}
+
+message DataAppOnScreenProto {
+    required int64 sampleTime = 1;
+    required string appName = 2;
+    required int64 startTime = 3;
+    required int64 endTime = 4;
+}

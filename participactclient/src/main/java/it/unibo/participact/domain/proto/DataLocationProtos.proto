@@ -1,0 +1,17 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataLocationProtos";
+
+message DataLocationProtoList {
+    repeated DataLocationProto list = 1;
+}
+
+message DataLocationProto {
+    required int64 sampleTime = 1;
+    required double longitude = 2;
+    required double latitude = 3;
+    required double accuracy = 4;
+    required string provider = 5;
+}

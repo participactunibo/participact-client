@@ -1,0 +1,15 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataQuestionaireOpenAnswerProtos";
+
+message DataQuestionaireOpenAnswerProtoList {
+    repeated DataQuestionaireOpenAnswerProto list = 1;
+}
+
+message DataQuestionaireOpenAnswerProto {
+    required int64 sampleTime = 1;
+    required int64 question_id = 2;
+    required string answer_value = 3;
+}

@@ -1,0 +1,17 @@
+-dontobfuscate
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*,!code/allocation/variable
+
+-dontwarn javax.mail.**
+-dontwarn javax.naming.Context
+-dontwarn javax.naming.InitialContext
+-dontwarn java.awt.**
+-dontwarn javax.management.**
+-dontwarn org.w3c.dom.bootstrap.**
+-dontwarn com.google.android.gms.common.api.**
+-dontwarn com.google.gson.**
+-dontwarn org.simpleframework.**
+-dontwarn org.apache.commons.**
+-dontwarn javax.xml.bind.**
+-dontwarn com.google.code.rome.android.repackaged.**
+-dontwarn org.apache.log4j.**
+-dontwarn java.lang.management.**

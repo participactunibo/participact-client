@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ ParticipAct
+  ~ Copyright 2013-2018 Alma Mater Studiorum – Università di Bologna
+  ~ This file is part of ParticipAct.
+  ~ ParticipAct is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License.
+  ~ ParticipAct is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~ You should have received a copy of the GNU General Public License along with ParticipAct. If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.ksoichiro.android.observablescrollview.ObservableScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true">
+
+
+            <com.marvinlabs.widget.floatinglabel.edittext.FloatingLabelEditText
+                android:id="@+id/task_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flw_labelTextColor="@color/grey"
+                app:flw_labelTextSize="18sp"
+                app:flw_labelText="@string/create_task_fragment_name"
+                app:flw_inputWidgetTextSize="20sp" />
+
+            <com.marvinlabs.widget.floatinglabel.edittext.FloatingLabelEditText
+                android:id="@+id/task_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flw_labelTextColor="@color/grey"
+                app:flw_labelTextSize="18sp"
+                app:flw_labelText="@string/create_task_fragment_description"
+                app:flw_inputWidgetTextSize="20sp" />
+
+            <com.marvinlabs.widget.floatinglabel.instantpicker.FloatingLabelDatePicker
+                android:layout_width="match_parent"
+                android:id="@+id/task_start_date"
+                android:layout_height="wrap_content"
+                app:flw_labelTextColor="@color/grey"
+                app:flw_labelTextSize="18sp"
+                app:flw_inputWidgetTextSize="20sp"
+                app:flw_labelText="@string/create_task_fragment_start_date"
+                />
+
+
+            <com.marvinlabs.widget.floatinglabel.instantpicker.FloatingLabelTimePicker
+                android:layout_width="match_parent"
+                android:id="@+id/task_start_time"
+                android:layout_height="wrap_content"
+                app:flw_labelTextColor="@color/grey"
+                app:flw_labelTextSize="18sp"
+                app:flw_inputWidgetTextSize="20sp"
+                app:flw_labelText="@string/create_task_fragment_start_time"
+                />
+
+            <com.marvinlabs.widget.floatinglabel.instantpicker.FloatingLabelDatePicker
+                android:id="@+id/task_end_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:flw_labelTextColor="@color/grey"
+                app:flw_labelTextSize="18sp"
+                app:flw_inputWidgetTextSize="20sp"
+                app:flw_labelText="@string/create_task_fragment_end_date"
+                />
+
+
+            <com.marvinlabs.widget.floatinglabel.instantpicker.FloatingLabelTimePicker
+                android:layout_width="match_parent"
+                android:id="@+id/task_end_time"
+                android:layout_height="wrap_content"
+                app:flw_labelTextColor="@color/grey"
+                app:flw_labelTextSize="18sp"
+                app:flw_inputWidgetTextSize="20sp"
+                app:flw_labelText="@string/create_task_fragment_end_time"
+                />
+
+
+            <it.unibo.participact.views.floating_duration.FloatingLabelDurationPicker
+                android:id="@+id/task_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_timepicker"
+                app:flw_labelTextColor="@color/grey"
+                app:flw_labelTextSize="18sp"
+                app:flw_inputWidgetTextSize="20sp"
+                android:inputType="datetime"
+                app:flw_labelText="@string/create_task_fragment_duration"
+                />
+
+            <CheckedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/create_task_fragment_refusable"
+                android:checked="true"
+                android:checkMark="?android:attr/listChoiceIndicatorMultiple"
+                android:id="@+id/task_refusable"
+                android:textColor="@color/grey"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp" />
+
+
+        </LinearLayout>
+    </com.github.ksoichiro.android.observablescrollview.ObservableScrollView>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="8dp"
+        fab:fab_icon="@drawable/ic_action_upload"
+        app:fab_colorPressed="@color/accent"
+        app:fab_colorNormal="@color/accent" />
+
+
+</RelativeLayout>
+

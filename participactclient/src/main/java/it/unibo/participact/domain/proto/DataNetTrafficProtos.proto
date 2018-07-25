@@ -1,0 +1,16 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataNetTrafficProtos";
+
+message DataNetTrafficProtoList {
+    repeated DataNetTrafficProto list = 1;
+}
+
+message DataNetTrafficProto {
+    required int64 sampleTime = 1;
+    required string appName = 2;
+    required int64 txBytes = 3;
+    required int64 rxBytes = 4;
+}

@@ -1,0 +1,299 @@
+#
+# generated on 2014/02/28 04:00:32
+#
+# --table-start--
+dataClass=it.unibo.participact.domain.persistence.ActionFlat
+tableName=actionflat
+# --table-fields-start--
+# --field-start--
+fieldName=id
+id=true
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=numeric_threshold
+# --field-end--
+# --field-start--
+fieldName=duration_threshold
+# --field-end--
+# --field-start--
+fieldName=input_type
+# --field-end--
+# --field-start--
+fieldName=questions
+foreignCollection=true
+foreignCollectionEager=true
+foreignCollectionOrderColumnName=question_order
+# --field-end--
+# --field-start--
+fieldName=type
+dataPersister=ENUM_STRING
+# --field-end--
+# --field-start--
+fieldName=title
+# --field-end--
+# --field-start--
+fieldName=task
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=it.unibo.participact.domain.persistence.ClosedAnswer
+tableName=closedanswer
+# --table-fields-start--
+# --field-start--
+fieldName=id
+id=true
+# --field-end--
+# --field-start--
+fieldName=question
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=answerDescription
+# --field-end--
+# --field-start--
+fieldName=answerOrder
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=it.unibo.participact.domain.persistence.Question
+tableName=question
+# --table-fields-start--
+# --field-start--
+fieldName=id
+id=true
+# --field-end--
+# --field-start--
+fieldName=question
+# --field-end--
+# --field-start--
+fieldName=question_order
+# --field-end--
+# --field-start--
+fieldName=closed_answers
+foreignCollection=true
+foreignCollectionEager=true
+# --field-end--
+# --field-start--
+fieldName=isClosedAnswers
+# --field-end--
+# --field-start--
+fieldName=isMultipleAnswers
+# --field-end--
+# --field-start--
+fieldName=actionFlat
+foreign=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=it.unibo.participact.domain.persistence.QuestionnaireProgressPerAction
+tableName=questionnaireprogressperaction
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=taskStatus
+foreign=true
+foreignAutoRefresh=true
+maxForeignAutoRefreshLevel=2
+# --field-end--
+# --field-start--
+fieldName=action
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=done
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=it.unibo.participact.domain.persistence.RemainingPhotoPerAction
+tableName=remainingphotoperaction
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=action
+foreign=true
+# --field-end--
+# --field-start--
+fieldName=taskStatus
+foreign=true
+foreignAutoRefresh=true
+maxForeignAutoRefreshLevel=2
+# --field-end--
+# --field-start--
+fieldName=remaingPhoto
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=it.unibo.participact.domain.persistence.TaskFlat
+tableName=taskflat
+# --table-fields-start--
+# --field-start--
+fieldName=id
+id=true
+# --field-end--
+# --field-start--
+fieldName=name
+# --field-end--
+# --field-start--
+fieldName=description
+# --field-end--
+# --field-start--
+fieldName=deadline
+dataPersister=DATE_TIME
+# --field-end--
+# --field-start--
+fieldName=points
+# --field-end--
+# --field-start--
+fieldName=start
+dataPersister=DATE_TIME
+# --field-end--
+# --field-start--
+fieldName=duration
+# --field-end--
+# --field-start--
+fieldName=sensingDuration
+# --field-end--
+# --field-start--
+fieldName=latitude
+# --field-end--
+# --field-start--
+fieldName=longitude
+# --field-end--
+# --field-start--
+fieldName=radius
+# --field-end--
+# --field-start--
+fieldName=canBeRefused
+# --field-end--
+# --field-start--
+fieldName=actions
+foreignCollection=true
+foreignCollectionEager=true
+foreignCollectionOrderColumnName=id
+# --field-end--
+# --field-start--
+fieldName=type
+# --field-end--
+# --field-start--
+fieldName=notificationArea
+# --field-end--
+# --field-start--
+fieldName=activationArea
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=it.unibo.participact.domain.persistence.TaskStatus
+tableName=taskstatus
+# --table-fields-start--
+# --field-start--
+fieldName=id
+id=true
+# --field-end--
+# --field-start--
+fieldName=task
+foreign=true
+foreignAutoRefresh=true
+# --field-end--
+# --field-start--
+fieldName=state
+dataPersister=ENUM_STRING
+# --field-end--
+# --field-start--
+fieldName=lastCheckedTimestamp
+# --field-end--
+# --field-start--
+fieldName=sensingProgress
+# --field-end--
+# --field-start--
+fieldName=photoThreshold
+# --field-end--
+# --field-start--
+fieldName=photoProgress
+# --field-end--
+# --field-start--
+fieldName=questionnaireProgress
+# --field-end--
+# --field-start--
+fieldName=questionnaireThreshold
+# --field-end--
+# --field-start--
+fieldName=activityDetectionProgress
+# --field-end--
+# --field-start--
+fieldName=activityDetectionDuration
+# --field-end--
+# --field-start--
+fieldName=acceptedTime
+dataPersister=DATE_TIME
+# --field-end--
+# --field-start--
+fieldName=remainingPhotoPerAction
+foreignCollection=true
+foreignCollectionEager=true
+# --field-end--
+# --field-start--
+fieldName=questionnaireProgressPerAction
+foreignCollection=true
+foreignCollectionEager=true
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
+# --table-start--
+dataClass=it.unibo.participact.domain.persistence.DataQuestionnaireFlat
+tableName=dataquestionnaireflat
+# --table-fields-start--
+# --field-start--
+fieldName=id
+generatedId=true
+# --field-end--
+# --field-start--
+fieldName=taskId
+# --field-end--
+# --field-start--
+fieldName=actionId
+# --field-end--
+# --field-start--
+fieldName=questionId
+# --field-end--
+# --field-start--
+fieldName=type
+# --field-end--
+# --field-start--
+fieldName=answerId
+# --field-end--
+# --field-start--
+fieldName=closedAnswerValue
+# --field-end--
+# --field-start--
+fieldName=openAnswerValue
+# --field-end--
+# --field-start--
+fieldName=timestamp
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################

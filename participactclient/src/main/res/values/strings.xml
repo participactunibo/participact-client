@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ ParticipAct
+  ~ Copyright 2013-2018 Alma Mater Studiorum – Università di Bologna
+  ~ This file is part of ParticipAct.
+  ~ ParticipAct is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License.
+  ~ ParticipAct is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~ You should have received a copy of the GNU General Public License along with ParticipAct. If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+
+    <string name="app_name" translatable="false">Unibo ParticipAct</string>
+    <string name="gcm_new_message">New Task Available!</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_task" translatable="false">TaskActivity</string>
+    <string name="title_activity_task_list" translatable="false">TaskListActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_welcome" translatable="false">ParticipAct</string>
+    <string name="title_activity_dashboard" translatable="false">Dashboard</string>
+    <string name="title_activity_questionnaire">Questionnaire</string>
+
+    <!-- Card Label -->
+    <string name="card_label_descrizione">"Description: "</string>
+    <string name="card_label_punti">"Points: "</string>
+    <string name="card_label_sensori">"Sensors: "</string>
+    <string name="card_label_durata">"Duration (in min): "</string>
+    <string name="card_label_deadline">"Deadline: "</string>
+    <string name="card_label_progress">"Completion (in %): "</string>
+    <string name="error_login_dialog_title">Attention</string>
+    <string name="error_login_dialog_bad_credential">Error in authentication. Check your username and password.</string>
+    <string name="error_login_dialog_no_network">Error communicating with the server. Make sure the data connection.</string>
+    <string name="error_login_dialog_ok_button" translatable="false">OK</string>
+    <string name="card_label_deadline_date">"Available until:"</string>
+    <string name="card_label_expiration_date">"Expires on: "</string>
+    <string name="error_login_dialog_generic_error">An error occurred while authentication. Check the connection and try again later.</string>
+    <string name="card_label_progress_threshold">"Minimum threshold of completion:"</string>
+    <string name="welcome_main_card">Hello, ParticipAct is an experiment in participation. The goal is to involve students and volunteers in the first experiment in the world on a large scale of data collection using smartphones, which act as automatic sensors and interaction interfaces for the collection of information on users and on the context in which they are located.</string>
+    <string name="welcome_news_beta">Please note that ParticipAct is currently still in testing so some functions may not be available. We invite you to contact us with any questions, suggestions or impressions of use.</string>
+    <string name="stats_completed_with_success">Task completed successfully:</string>
+    <string name="stats_completed_with_failure">Task not completed successfully:</string>
+    <string name="stats_rejected">Task rejected or expired:</string>
+    <string name="task_not_exec">Geo Task can not be executed at this location</string>
+
+    <!-- Drawer Label -->
+    <string name="drawer_open" translatable="false">Participact</string>
+    <string name="drawer_close" translatable="false">Participact</string>
+
+
+    <string name="open_question_text">Open Question Text</string>
+    <string name="questionnaire">Questionnaire</string>
+    <string name="questionnaires">Questionnaires</string>
+    <string name="action_photo_take_picture">Take a picture</string>
+    <string name="activity_detecion">Activity Detection</string>
+    <string name="color_stripe">Color Stripe</string>
+    <string name="set_timer">Set Timer</string>
+    <string name="next">Next</string>
+    <string name="task_not_compatible">Task is not compatible with the current version. Please update your client using the Play Store.</string>
+    <string name="login_upper_case" translatable="false">LOGIN</string>
+    <string name="battery_drain_description">The graph shows the average consumption of battery ParticipAct detected on a battery charge.</string>
+    <string name="logout" translatable="false">Logout</string>
+    <string name="static_in_pocket">Static in your pocket</string>
+    <string name="task_ParticipAct" translatable="false">Task ParticipAct</string>
+    <string name="refresh">Refresh</string>
+    <string name="task_activity_detection">Task Activity Detection </string>
+    <string name="task_audio_detection">Task Audio Detection</string>
+    <string name="walk">Walk</string>
+    <string name="run">Run</string>
+    <string name="reject">Reject</string>
+    <string name="accept">Accept</string>
+    <string name="pictures_to_take">Pictures to take</string>
+
+    <string name="social_find_friends_button_uppercase">FIND YOUR FRIENDS</string>
+
+    <string name="facebook" translatable="false">Facebook</string>
+    <string name="google_plus" translatable="false">Google+</string>
+    <string name="previous_short">Prev</string>
+
+    <string name="licenses_error">Error: can\'t show licences.</string>
+    <string name="licenses_title">Licenses</string>
+
+    <string name="console_gen_description">The console allows you to activate or suspend the activities of the sensing system. Please note that the deactivation is not definitive, the system will return to normal after 8 hours.</string>
+    <string name="console_gen_title">Main Console</string>
+    <string name="console_task_description">From this form you can selectively turn off the active tasks. Attention, in this case the deactivation is final.</string>
+    <string name="console_task_title">Task Console</string>
+
+    <string name="friends_fragment_friends">Friends</string>
+    <string name="friends_fragment_pending">Pending</string>
+    <string name="friends_fragment_find">Find</string>
+    <string name="friends_fragment_success_friend_remove">Successfully removed friend</string>
+    <string name="friends_fragment_fail_friend_remove">Problem in removing friend</string>
+    <string name="friends_fragment_success_request">Request handled correctly</string>
+    <string name="friends_fragment_fail_request">Problem in handling the request</string>
+
+    <string name="leaderboard_fragment_global">Global</string>
+    <string name="leaderboard_fragment_social">Social</string>
+
+    <string name="logout_description">This tab allows you to logout the user.</string>
+    <string name="participact_notification">ParticipAct Notification</string>
+    <string name="time_restore_success">Time properly restored</string>
+
+    <string name="new_app_update">ParticipAct update</string>
+    <string name="tap_to_update">Tap here to update</string>
+    <string name="new_tasks_notification">New Tasks available!</string>
+
+    <string name="error">Error:</string>
+    <string name="hi">Hi</string>
+    <string name="social_fragment_success_request">Request handled correctly</string>
+    <string name="social_fragment_success_link_account">Account successfully connected</string>
+    <string name="social_fragment_fail_link_account">Error in linking accounts</string>
+
+    <string name="attention">Attention</string>
+    <string name="wrong_time_details">We found that the date and time set on the device has changed. The normal operation of PartcipAct will be restored once we verify the validity of those changes. You need an internet connection</string>
+
+    <string name="user_fragment_summary">Summary</string>
+    <string name="user_fragment_badges" translatable="false">Badges</string>
+
+    <string name="news_of">News of</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+
+    <string name="no_active_tasks">No task is currently active.</string>
+    <string name="no_available_tasks">No Task Available</string>
+
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+
+    <string name="statistics_title">Statistics</string>
+    <string name="statistics_description">This card summarizes some information on your profile and in general the experiment.</string>
+
+    <string name="camera">Camera</string>
+    <string name="photo">Photo</string>
+    <string name="photo_description">Photo description</string>
+    <string name="take_picture_short">Take</string>
+    <string name="of">of</string>
+    <string name="completed">Completed!</string>
+    <string name="questionnaire_description">Questionnaire description</string>
+    <string name="complete_questionnaire">Complete</string>
+
+    <string name="tasks_active_title">Active tasks</string>
+    <string name="tasks_active_description">This card summarizes the information about the tasks that are currently running. </string>
+    <string name="tasks_available_title">Available Tasks</string>
+    <string name="tasks_available_description">his card summarizes the information about the tasks currently available.</string>
+    <string name="tasks_completed_title">Completed Tasks</string>
+    <string name="tasks_completed_description">This card summarizes the information about the tasks successfully completed by the user.</string>
+
+    <string name="welcome">Welcome</string>
+
+
+    <string name="twitter_consumer_key" translatable="false">nG1oP4D3PIXJJdpUfxjrQrURT</string>
+    <string name="twitter_consumer_secret" translatable="false">h2yHCujwZTI1L8grVNCNGcE0rcJfqbh1agULLqrRD4VEGQLBA5</string>
+    <string name="facebook_app_id" translatable="false">567008370068429</string>
+    <string name="social_intro">From here you can connect your social networks to find your friends</string>
+    <string name="social_intro_button">LOGIN</string>
+    <string name="network_error">Network Error</string>
+    <string name="no_data_badges">No badges unlocked</string>
+    <string name="no_data_friends">No friends found</string>
+    <string name="twitter" translatable="false">Twitter</string>
+    <string name="action_add_task">Add</string>
+    <string name="title_activity_create_task" translatable="false">CreateTaskActivity</string>
+    <string name="action_add_notification_area">Notification Area</string>
+    <string name="action_add_activation_area">Activation Area</string>
+    <string name="action_add_area" translatable="false">Area</string>
+    <string name="action_add_action">Add Action</string>
+    <string name="action_add_questionaire_action">Questionnaire</string>
+    <string name="action_add_activity_detection_action">Activity Detection</string>
+
+    <string name="action_add_sensing_action" translatable="false">Sensing</string>
+    <string name="upload_task">Submit Task</string>
+    <string name="action_add_photo_action">Photo</string>
+
+    <string name="sensing" translatable="false">Sensing</string>
+
+    <string name="actions_empty_list">Add an action to the current task pressing \"+\" </string>
+    <string name="activity_detection_duration_threshold">Success threshold</string>
+    <string name="open_question">Open Question</string>
+    <string name="closed_question">Closed Question</string>
+    <string name="questions_empty_list">Add a question to the current questionaire pressing \"+\" </string>
+
+    <string name="no_friends_yet">Try to send some friend request</string>
+    <string name="no_friends_pending">No friend request</string>
+
+    <string name="tip_badges">Some tasks have an assigned badge, tap here to see the unlocked ones.</string>
+    <string name="tip_leaderboard_friends">Want to see just scores of friends? Simple, tap here.</string>
+
+    <string name="share_badge">Share Badge</string>
+    <string name="unlocked_badge">I unlocked the Badge</string>
+
+    <string name="social_network_error">There was a problem in communication with the social network. Please try again later.</string>
+    <string name="stats_created_tasks">Task created with success:</string>
+
+    <string name="add_task_btn_id" translatable="false">add_task_fab</string>
+    <string name="create_task_desc">You can create task supplying all the informations related to it. You can visualize and add actions clicking on \"Actions\" and when you are ready just send the new task clicking the upload button.</string>
+
+    <string name="please_wait">Please wait</string>
+
+    <string name="faq_url" translatable="false">http://participact.ing.unibo.it/faq/faq.html</string>
+    <string name="add_task_btn_desc">Welcome in the Task\'s section. If you want you can create new tasks clicking the add button on the right corner.</string>
+
+    <string name="pending_task_photo_and_questionnaire">You still have to answer the questionnaire and take pictures</string>
+    <string name="pending_task_photo">You still have to take pictures</string>
+    <string name="pending_task_questionnaire">You still have to answer the questionnaire</string>
+
+    <string name="new_task_accepted">New Task accepted</string>
+
+    <string name="login_again_error">Please login again</string>
+
+    <string name="task_blocked_wrong_time">New Task blocked by date and / or time compromised.</string>
+
+    <string name="participact_compromised">ParticipAct compromised</string>
+    <string name="date_time_changed">Attention, you have changed the date and / or time.</string>
+
+    <string name="new_friend_request">You have a new friend request</string>
+    <string name="new_badge_unlocked">You\'ve unlocked a new badge</string>
+
+    <string name="go">go</string>
+    <string name="new_task_valutation_refused">A task created by you has been refused by the administrator</string>
+    <string name="new_task_valutation_approved">A task created by you has been approved by the administrator</string>
+    <string name="action_bar_action_title">Task\'s action</string>
+    <string name="action_activity_detection_added">You have already added an activity detection action.</string>
+    <string name="action_activity_detection_title">Activity Detection</string>
+    <string name="duration_time_picker_title">Activity Treshold</string>
+    <string name="validation_activity_detection_threshold_not_empty">Threshold can\'t be empty</string>
+    <string name="validation_activity_detection_threshold_not_null">Threshold can\'t be null</string>
+    <string name="action_closed_answer_question_title">Closed Answer</string>
+    <string name="validation_closed_answer_empty">You can\'t add an empty answer</string>
+    <string name="validation_closed_answer_at_least_two">Answers should be at least two.</string>
+    <string name="validation_closed_answer_not_empty">Question can\'t be empty</string>
+    <string name="validation_create_task_name_not_empty">Task\'s name can\'t be empty</string>
+    <string name="validation_create_task_description_not_empty">Task\'s description can\'t be empty</string>
+    <string name="validation_create_task_starttime_not_empty">Start time can\'t be empty</string>
+    <string name="validation_create_task_endtime_not_empty">End time can\'t be empty</string>
+    <string name="validation_create_task_endtime_lower_starttime">End time can\'t be before than start time</string>
+    <string name="validation_create_task_endtime_lower_now">End time can\'t be before now</string>
+    <string name="validation_create_task_duration_not_empty">Task\'s duration can\'t be empty</string>
+    <string name="validation_create_task_duration_not_null">Task\'s duration can\'t be null</string>
+    <string name="validation_create_task_duration_not_smaller_than_sensing">Task\'s duration can\'t be smaller than sensing one.</string>
+    <string name="validation_create_task_action">Task should contain at least an action.</string>
+    <string name="start_date_picker_name" translatable="false">StartDatePicker</string>
+    <string name="start_time_picker_name" translatable="false">StartTimePicker</string>
+    <string name="end_date_picker" translatable="false">EndDatePicker</string>
+    <string name="end_time_picker" translatable="false">EndTimePicker</string>
+    <string name="duration_time_picker">Task Duration</string>
+    <string name="action_open_answer_question_title">Open Answer</string>
+    <string name="validation_open_answer_not_empty">Question can\'t be empty</string>
+    <string name="action_passive_sensing_title">Sensing</string>
+    <string name="validate_action_sensing_duration_not_empty">Duration can\'t be empty</string>
+    <string name="validate_action_sensing_duration_not_null">Duration can\'t be null</string>
+    <string name="validate_action_sensing_duration_not_grather_than_task">Duration can\'t be grather than task one</string>
+    <string name="validate_action_sensing_description_not_null">Description can\'t be null</string>
+    <string name="validate_action_sensing_type_not_null">Sensing type can\'t be null</string>
+    <string name="action_photo_title">Photo</string>
+    <string name="validate_action_photo_description_not_empty">Description can\'t be empty</string>
+    <string name="validate_action_photo_number_not_empty">Photo\'s number can\'t be null</string>
+    <string name="action_questionnaire_title">Questionnaire</string>
+    <string name="validation_questionnaire_title">Title can\'t be empty</string>
+    <string name="validation_questionnaire_description">Description can\'t be empty.</string>
+    <string name="action_question_title">Questions</string>
+    <string name="action_select_friends_title">Select Friends</string>
+    <string name="builder_confirmation_message">Task Created</string>
+    <string name="builder_error_message">Error</string>
+    <string name="builder_error_messagge">Task can\'t be created. Check your connection and try again.</string>
+    <string name="builder_error_messagge_network">Error in communicating with server. Try later.</string>
+    <string name="builder_success_message">Task created with success.</string>
+    <string name="page_admin_title">Administrator</string>
+    <string name="page_user_title">Users</string>
+    <string name="page_task_created_approved">Approved</string>
+    <string name="page_task_created_under_valutation">Under Valutation</string>
+    <string name="page_task_created_refused">Refused</string>
+    <string name="page_task_history_completed">Task completed</string>
+    <string name="page_task_history_created_completed">Task created and completed</string>
+    <string name="create_task_activity_title">Create Task</string>
+    <string name="action_questionnare_take_questionnaire">Compile Questionnaire</string>
+    <string name="closed_answer_insert_question">Insert question</string>
+    <string name="closed_answer_insert_answer">Insert answer</string>
+    <string name="closed_answer_multiple_answer">Multiple Answer</string>
+    <string name="duration_dialogfragment_hour">hours</string>
+    <string name="duration_dialogfragment_min">minutes</string>
+    <string name="duration_dialogfragment_cacncel" translatable="false">Cancel</string>
+    <string name="duration_dialogfragment_ok" translatable="false">Ok</string>
+    <string name="create_task_fragment_name">Name</string>
+    <string name="create_task_fragment_description">Description</string>
+    <string name="create_task_fragment_start_date">Start Date</string>
+    <string name="create_task_fragment_start_time">Start Time</string>
+    <string name="create_task_fragment_end_date">End Date</string>
+    <string name="create_task_fragment_end_time">End time</string>
+    <string name="create_task_fragment_duration">Duration</string>
+    <string name="create_task_fragment_refusable">Refusable</string>
+    <string name="add_questionaire_action_title">Title</string>
+    <string name="add_questionaire_action_description">Description</string>
+    <string name="add_sensing_action_duration">Sensing Duration</string>
+    <string name="add_sensing_action_description">Description</string>
+    <string name="add_sensing_action_type">Sensing type</string>
+    <string name="open_answer_fragment_insert_question">Insert Question</string>
+    <string name="no_friends_send_task">You have no friends, but you can send task anyway</string>
+    <string name="sensing_duration_info">Rememebr: sensing duration is valid for all sensing task you add. You can\'t specify a sensing duration greather than task duration.</string>
+    <string name="task_duration_info">The actual task duration is:</string>
+    <string name="no_task_duration_specified">You haven\'t specified a task duration yet.</string>
+    <string name="sensing_duration_time_picker">Sensing duration</string>
+    <string name="duration_dialogfragment_days">days</string>
+    <string name="geofence">Position Recognition</string>
+    <string name="new_badge_collected">You have collected a badge</string>
+</resources>

@@ -1,0 +1,19 @@
+package proto;
+
+option java_package = "it.unibo.participact.domain.proto";
+
+option java_outer_classname = "DataDRProtos";
+
+message DataDRProtoList {
+    repeated DataDRProto list = 1;
+}
+
+message DataDRProto {
+    required string state = 1;
+    required string pole = 2;
+    required float latitude = 3;
+    required float longitude = 4;
+    required float accuracy = 5;
+    required int64 timestamp = 6;
+    required string status = 7;
+}

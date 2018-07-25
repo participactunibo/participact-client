@@ -1,0 +1,109 @@
+<!--
+  ~ ParticipAct
+  ~ Copyright 2013-2018 Alma Mater Studiorum – Università di Bologna
+  ~ This file is part of ParticipAct.
+  ~ ParticipAct is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License.
+  ~ ParticipAct is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+  ~ See the GNU General Public License for more details.
+  ~ You should have received a copy of the GNU General Public License along with ParticipAct. If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:id="@+id/pickers_layout">
+
+        <NumberPicker
+            android:id="@+id/day"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <TextView
+            android:text="@string/duration_dialogfragment_days"
+            android:gravity="center_horizontal"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/day"
+            android:layout_alignLeft="@+id/day"
+            android:id="@+id/textView" />
+
+
+        <NumberPicker
+            android:id="@+id/hour"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_toRightOf="@+id/day" />
+
+        <TextView
+            android:text="@string/duration_dialogfragment_hour"
+            android:gravity="center_horizontal"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hour"
+            android:layout_alignLeft="@+id/hour"
+            android:id="@+id/textView1" />
+
+        <NumberPicker
+            android:id="@+id/minute"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_toRightOf="@+id/hour" />
+
+        <TextView
+            android:text="@string/duration_dialogfragment_min"
+            android:gravity="center_horizontal"
+            android:layout_width="70dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/minute"
+            android:layout_alignLeft="@+id/minute"
+            android:id="@+id/textView2" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:measureWithLargestChild="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/pickers_layout">
+
+
+        <Button
+            android:id="@+id/canc_btn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/duration_dialogfragment_cacncel" />
+
+        <Button
+            android:id="@+id/ok_btn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:text="@string/duration_dialogfragment_ok" />
+    </LinearLayout>
+
+</RelativeLayout>
